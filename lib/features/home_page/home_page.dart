@@ -3,7 +3,6 @@ import 'package:untitled1/recommendation_page.dart';
 import 'package:untitled1/review_page.dart';
 
 import '../../blog_page.dart';
-import '../../destination_page.dart';
 import '../../nearby_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,9 +15,9 @@ class _HomePageState extends State<HomePage> {
 
   static final List<Widget> _pages = <Widget>[
     HomeScreen(),
-    DestinationsPage(
-      destinationName: '',
-    ),
+    // DestinationsPage(
+    //   destinationName: '',
+    // ),
     RecommendationsPage(),
     ReviewsPage(),
     NearbyPage(),

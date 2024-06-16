@@ -7,7 +7,7 @@ class CustomElevatedButtonThemeData {
 
   static ElevatedButtonThemeData lightThemeData = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      backgroundColor: CustomColors.secondaryColor,
+      backgroundColor: CustomColors.primaryColor,
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),

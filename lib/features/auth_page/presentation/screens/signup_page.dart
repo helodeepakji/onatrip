@@ -26,10 +26,10 @@ class SignupPage extends StatelessWidget {
                   vertical: Spaces.defaultVerticalPadding,
                 ),
                 decoration: const BoxDecoration(
-                  // borderRadius: BorderRadius.only(
-                  //   topLeft: Radius.circular(36),
-                  //   topRight: Radius.circular(36),
-                  // ),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                  ),
                   color: CustomColors.primaryColor,
                 ),
                 child: const Column(
@@ -75,6 +75,25 @@ class SignupPage extends StatelessWidget {
                         child: const Text("Sign Up"),
                       ),
                     ),
+                    SizedBox(height: 16.h),
+                    const Wrap(
+                      children: [
+                        Text(
+                          "Already have an account?  ",
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          "Sign In",
+                          style: TextStyle(
+                            color: CustomColors.primaryColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                     SizedBox(height: 32.h),
                     Row(
                       children: [
@@ -107,7 +126,7 @@ class SignupPage extends StatelessWidget {
                           children: [
                             Assets.svg.google.svg(),
                             const SizedBox(width: 8),
-                            const Text("Sign Up"),
+                            const Text("Google"),
                           ],
                         ),
                       ),
