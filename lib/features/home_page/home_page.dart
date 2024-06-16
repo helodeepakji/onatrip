@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:untitled1/recommendation_page.dart';
 import 'package:untitled1/review_page.dart';
 
-import 'blog_page.dart';
-import 'destination_page.dart';
-import 'nearby_page.dart';
+import '../../blog_page.dart';
+import '../../destination_page.dart';
+import '../../nearby_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,7 +16,9 @@ class _HomePageState extends State<HomePage> {
 
   static final List<Widget> _pages = <Widget>[
     HomeScreen(),
-    DestinationsPage(destinationName: '',),
+    DestinationsPage(
+      destinationName: '',
+    ),
     RecommendationsPage(),
     ReviewsPage(),
     NearbyPage(),
@@ -116,27 +118,45 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Colors.black,),
+            icon: Icon(
+              Icons.home,
+              color: Colors.black,
+            ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.location_on, color: Colors.black,),
+            icon: Icon(
+              Icons.location_on,
+              color: Colors.black,
+            ),
             label: 'Destinations',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star, color: Colors.black,),
+            icon: Icon(
+              Icons.star,
+              color: Colors.black,
+            ),
             label: 'Recommendations',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.reviews, color: Colors.black,),
+            icon: Icon(
+              Icons.reviews,
+              color: Colors.black,
+            ),
             label: 'Reviews',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.map, color: Colors.black,),
+            icon: Icon(
+              Icons.map,
+              color: Colors.black,
+            ),
             label: 'Nearby',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.article, color: Colors.black,),
+            icon: Icon(
+              Icons.article,
+              color: Colors.black,
+            ),
             label: 'Blog',
           ),
         ],
@@ -147,6 +167,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -317,7 +338,6 @@ class RecommendationItem extends StatelessWidget {
   }
 }
 
-
 class CategoryCard extends StatelessWidget {
   final IconData icon;
   final String name;
@@ -361,7 +381,7 @@ class DestinationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,  // Set a fixed width for the card
+      width: 300, // Set a fixed width for the card
       margin: EdgeInsets.all(8.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
