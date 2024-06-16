@@ -16,6 +16,7 @@ class _ProfilePageState extends State<ProfilePage> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
+            const SizedBox(height: 20,),
             Row(
               children: [
                 const Icon(Icons.arrow_back_ios,size: 24,),
@@ -24,7 +25,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   "Account",
                   style: GoogleFonts.lato(
                       textStyle:
-                          const TextStyle(fontSize: 16, color: Colors.black)),
+                          const TextStyle(fontSize: 16, color: Colors.black,fontWeight: FontWeight.bold)),
                 ),
                 const Spacer(),
                 Image.asset("assets/icon/menu.png")
@@ -47,18 +48,17 @@ class _ProfilePageState extends State<ProfilePage> {
                   SizedBox(height: 20,),
                   Text(
                     "Brandon Smith",
-                    style: GoogleFonts.lato(
-                        textStyle:
-                        const TextStyle(fontSize: 14, color: Colors.black)),
+                    style: GoogleFonts.lato(textStyle: const TextStyle(fontSize: 14, color: Colors.black,fontWeight: FontWeight.bold)),
                   ),
-                  TextButton.icon(onPressed: (){}, icon: Icon(Icons.location_on,color: Color(0xFFF28251),size: 10,),
-                      label: Text(
-                        "BALI, INDONESIA",
-                        style: GoogleFonts.lato(
-                            textStyle:
-                            const TextStyle(fontSize: 10, color: Color(0xFFF28251))),
-                      ),),
-                  SizedBox(height: 10,),
+                  Container(
+                      color: Colors.white,
+                    child: TextButton.icon(onPressed: (){}, icon: Icon(Icons.location_on,color: Color(0xFFF28251),size: 10,),
+                        label: Text(
+                          "BALI, INDONESIA",
+                          style: GoogleFonts.lato(textStyle: const TextStyle(fontSize: 10, color: Color(0xFFF28251))),
+                        ),),
+                  ),
+                  const SizedBox(height: 40,),
                   ListTile(
                     leading: Container(
                       padding: EdgeInsets.all(5),
@@ -68,10 +68,10 @@ class _ProfilePageState extends State<ProfilePage> {
                         shape: BoxShape.circle,
                         color: Color(0xFFFFE4D9)
                       ),
-                      child: Icon(Icons.person, color: Color(0xFFF28251),size: 25,),
+                      child: const Icon(Icons.person, color: Color(0xFFF28251),size: 25,),
 
                     ),
-                    trailing: Icon(Icons.navigate_next, color: Color(0xFFF28251),size: 25,),
+                    trailing: const Icon(Icons.navigate_next, color: Color(0xFFF28251),size: 25,),
                     title: Text(
                       "Edit Profile",
                       style: GoogleFonts.lato(
@@ -156,10 +156,10 @@ class _ProfilePageState extends State<ProfilePage> {
                       child: Icon(Icons.payment, color: Color(0xFFF28251),size: 25,),
 
                     ),
-                    trailing: Icon(Icons.navigate_next, color: Color(0xFFF28251),size: 25,),
+                    trailing: const Icon(Icons.navigate_next, color: Color(0xFFF28251),size: 25,),
                     title: Text(
                       "Payment Setting",
-                      style: GoogleFonts.lato( 
+                      style: GoogleFonts.lato(
                           textStyle:
                           const TextStyle(fontSize: 12, color:Colors.black)),
                     ),
