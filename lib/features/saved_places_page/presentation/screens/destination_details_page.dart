@@ -38,7 +38,7 @@ class _DestinationDetailsPageState extends State<DestinationDetailsPage> with Si
             SliverAppBar(
               pinned: true,
               floating: true,
-              expandedHeight: 280,
+              expandedHeight: 200,
               backgroundColor: CustomColors.primaryColor,
               automaticallyImplyLeading: true,
               leading: IconButton(
@@ -205,7 +205,7 @@ class _DestinationDetailsPageState extends State<DestinationDetailsPage> with Si
                       Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: CustomColors.primaryColor.withOpacity(0.1),
+                          color: CustomColors.primaryColor.withOpacity(0.075),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Row(
