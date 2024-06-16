@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/features/auth_page/presentation/screens/signup_page.dart';
-import 'package:untitled1/features/saved_places_page/presentation/screens/destination_details_page.dart';
 import 'common/themes/button_theme.dart';
 import 'common/helper/http_services.dart';
 import 'common/helper/token_manager.dart';
@@ -43,7 +42,7 @@ class AppState extends State<App> {
             elevatedButtonTheme: CustomElevatedButtonThemeData.lightThemeData,
           ),
           debugShowCheckedModeBanner: false,
-          home: const DestinationDetailsPage(),
+          home: const SignupPage(),
         );
       },
       // child: MaterialApp(

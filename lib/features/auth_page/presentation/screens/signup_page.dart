@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:untitled1/common/constants/colors.dart';
 import 'package:untitled1/common/constants/spaces.dart';
+import 'package:untitled1/features/saved_places_page/presentation/screens/saved_places_page.dart';
 import 'package:untitled1/gen/assets.gen.dart';
 
 class SignupPage extends StatelessWidget {
@@ -18,38 +19,46 @@ class SignupPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Container(
-                height: 300,
-                width: double.infinity,
-                padding: EdgeInsets.symmetric(
-                  horizontal: Spaces.defaultHorizontalPadding,
-                  vertical: Spaces.defaultVerticalPadding,
-                ),
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20),
-                  ),
-                  color: CustomColors.primaryColor,
-                ),
-                child: const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      "Create New Account",
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
+              // Container(
+              //   height: 300,
+              //   width: double.infinity,
+              //   padding: EdgeInsets.symmetric(
+              //     horizontal: Spaces.defaultHorizontalPadding,
+              //     vertical: Spaces.defaultVerticalPadding,
+              //   ),
+              //   decoration: const BoxDecoration(
+              //     borderRadius: BorderRadius.only(
+              //       bottomLeft: Radius.circular(20),
+              //       bottomRight: Radius.circular(20),
+              //     ),
+              //     color: CustomColors.primaryColor,
+              //   ),
+              //   child: const Column(
+              //     crossAxisAlignment: CrossAxisAlignment.start,
+              //     mainAxisAlignment: MainAxisAlignment.end,
+              //     children: [
+              //       Text(
+              //         "Create New Account",
+              //         style: TextStyle(
+              //           fontSize: 24,
+              //           color: Colors.white,
+              //           fontWeight: FontWeight.bold,
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              const Text(
+                "Create New Account",
+                style: TextStyle(
+                  fontSize: 24,
+                  color: CustomColors.subtitleColor,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 24.h),
+              SizedBox(height: 12.h),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: Spaces.defaultHorizontalPadding, vertical: Spaces.defaultVerticalPadding),
+                padding: EdgeInsets.symmetric(horizontal: Spaces.defaultHorizontalPadding),
                 child: Column(
                   children: <Widget>[
                     const Text(
@@ -60,7 +69,7 @@ class SignupPage extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                    SizedBox(height: 32.h),
+                    SizedBox(height: 36.h),
                     TextFormField(
                       decoration: const InputDecoration(
                         labelText: "Email",
@@ -71,7 +80,12 @@ class SignupPage extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushAndRemoveUntil(
+                            MaterialPageRoute(builder: (context) => const SavedPlacesPage()),
+                            (route) => false,
+                          );
+                        },
                         child: const Text("Sign Up"),
                       ),
                     ),
