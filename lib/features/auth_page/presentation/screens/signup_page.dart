@@ -19,35 +19,11 @@ class SignupPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              // Container(
-              //   height: 300,
-              //   width: double.infinity,
-              //   padding: EdgeInsets.symmetric(
-              //     horizontal: Spaces.defaultHorizontalPadding,
-              //     vertical: Spaces.defaultVerticalPadding,
-              //   ),
-              //   decoration: const BoxDecoration(
-              //     borderRadius: BorderRadius.only(
-              //       bottomLeft: Radius.circular(20),
-              //       bottomRight: Radius.circular(20),
-              //     ),
-              //     color: CustomColors.primaryColor,
-              //   ),
-              //   child: const Column(
-              //     crossAxisAlignment: CrossAxisAlignment.start,
-              //     mainAxisAlignment: MainAxisAlignment.end,
-              //     children: [
-              //       Text(
-              //         "Create New Account",
-              //         style: TextStyle(
-              //           fontSize: 24,
-              //           color: Colors.white,
-              //           fontWeight: FontWeight.bold,
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
+              SizedBox(height: 72.h),
+              Assets.images.onatriplogo.image(
+                width: MediaQuery.of(context).size.width * 0.5,
+              ),
+              SizedBox(height: 48.h),
               const Text(
                 "Create New Account",
                 style: TextStyle(
@@ -56,7 +32,7 @@ class SignupPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 12.h),
+              SizedBox(height: 6.h),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: Spaces.defaultHorizontalPadding),
                 child: Column(

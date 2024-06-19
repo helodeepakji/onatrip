@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/common/constants/colors.dart';
 import 'package:untitled1/features/auth_page/presentation/screens/signup_page.dart';
+import 'package:untitled1/features/home_page/presentation/screens/home_page.dart';
 import 'package:untitled1/features/profile_screen/presentation/screens/profile_page.dart';
 import 'package:untitled1/features/saved_places_page/presentation/screens/saved_places_page.dart';
+import 'package:untitled1/gen/assets.gen.dart';
 
 class CustomAppbar extends StatelessWidget {
   const CustomAppbar({
@@ -12,8 +14,12 @@ class CustomAppbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        Assets.images.onatriplogo.image(
+          height: 28,
+        ),
         Container(
           decoration: BoxDecoration(
             color: CustomColors.primaryColor,
@@ -25,6 +31,15 @@ class CustomAppbar extends StatelessWidget {
             padding: EdgeInsets.zero,
             itemBuilder: (BuildContext context) {
               return [
+                PopupMenuItem(
+                  onTap: () {
+                    Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(builder: (context) => const HomePage()),
+                      (route) => false,
+                    );
+                  },
+                  child: const Text('Home'),
+                ),
                 PopupMenuItem(
                   onTap: () {
                     Navigator.of(context).pushAndRemoveUntil(

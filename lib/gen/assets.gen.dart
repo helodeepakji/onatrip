@@ -15,8 +15,12 @@ import 'package:vector_graphics/vector_graphics.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/John.png
+  AssetGenImage get john => const AssetGenImage('assets/images/John.png');
+
   /// File path: assets/images/Red_Mountains.png
-  AssetGenImage get redMountains => const AssetGenImage('assets/images/Red_Mountains.png');
+  AssetGenImage get redMountains =>
+      const AssetGenImage('assets/images/Red_Mountains.png');
 
   /// File path: assets/images/banner1.png
   AssetGenImage get banner1 => const AssetGenImage('assets/images/banner1.png');
@@ -27,14 +31,23 @@ class $AssetsImagesGen {
   /// File path: assets/images/banner3.png
   AssetGenImage get banner3 => const AssetGenImage('assets/images/banner3.png');
 
+  /// File path: assets/images/clock.png
+  AssetGenImage get clock => const AssetGenImage('assets/images/clock.png');
+
   /// File path: assets/images/destination1.png
-  AssetGenImage get destination1 => const AssetGenImage('assets/images/destination1.png');
+  AssetGenImage get destination1 =>
+      const AssetGenImage('assets/images/destination1.png');
 
   /// File path: assets/images/destination2.png
-  AssetGenImage get destination2 => const AssetGenImage('assets/images/destination2.png');
+  AssetGenImage get destination2 =>
+      const AssetGenImage('assets/images/destination2.png');
 
   /// File path: assets/images/destination3.png
-  AssetGenImage get destination3 => const AssetGenImage('assets/images/destination3.png');
+  AssetGenImage get destination3 =>
+      const AssetGenImage('assets/images/destination3.png');
+
+  /// File path: assets/images/home_bg.png
+  AssetGenImage get homeBg => const AssetGenImage('assets/images/home_bg.png');
 
   /// File path: assets/images/img2.jpg
   AssetGenImage get img2 => const AssetGenImage('assets/images/img2.jpg');
@@ -48,8 +61,64 @@ class $AssetsImagesGen {
   /// File path: assets/images/img5.jpg
   AssetGenImage get img5 => const AssetGenImage('assets/images/img5.jpg');
 
+  /// File path: assets/images/james.png
+  AssetGenImage get james => const AssetGenImage('assets/images/james.png');
+
+  /// File path: assets/images/marry.png
+  AssetGenImage get marry => const AssetGenImage('assets/images/marry.png');
+
+  /// File path: assets/images/menu.png
+  AssetGenImage get menu => const AssetGenImage('assets/images/menu.png');
+
+  /// File path: assets/images/onatriplogo.png
+  AssetGenImage get onatriplogo =>
+      const AssetGenImage('assets/images/onatriplogo.png');
+
+  /// File path: assets/images/option.png
+  AssetGenImage get option => const AssetGenImage('assets/images/option.png');
+
+  /// File path: assets/images/pin.png
+  AssetGenImage get pin => const AssetGenImage('assets/images/pin.png');
+
+  /// File path: assets/images/profile.png
+  AssetGenImage get profile => const AssetGenImage('assets/images/profile.png');
+
+  /// File path: assets/images/rosy.png
+  AssetGenImage get rosy => const AssetGenImage('assets/images/rosy.png');
+
+  /// File path: assets/images/search.png
+  AssetGenImage get search => const AssetGenImage('assets/images/search.png');
+
+  /// File path: assets/images/star.png
+  AssetGenImage get star => const AssetGenImage('assets/images/star.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [redMountains, banner1, banner2, banner3, destination1, destination2, destination3, img2, img3, img4, img5];
+  List<AssetGenImage> get values => [
+        john,
+        redMountains,
+        banner1,
+        banner2,
+        banner3,
+        clock,
+        destination1,
+        destination2,
+        destination3,
+        homeBg,
+        img2,
+        img3,
+        img4,
+        img5,
+        james,
+        marry,
+        menu,
+        onatriplogo,
+        option,
+        pin,
+        profile,
+        rosy,
+        search,
+        star
+      ];
 }
 
 class $AssetsSvgGen {
@@ -182,7 +251,11 @@ class SvgGenImage {
     @deprecated bool cacheColorFilter = false,
   }) {
     return SvgPicture(
-      _isVecFormat ? AssetBytesLoader(_assetName, assetBundle: bundle, packageName: package) : SvgAssetLoader(_assetName, assetBundle: bundle, packageName: package),
+      _isVecFormat
+          ? AssetBytesLoader(_assetName,
+              assetBundle: bundle, packageName: package)
+          : SvgAssetLoader(_assetName,
+              assetBundle: bundle, packageName: package),
       key: key,
       matchTextDirection: matchTextDirection,
       width: width,
@@ -194,7 +267,8 @@ class SvgGenImage {
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
       theme: theme,
-      colorFilter: colorFilter ?? (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
+      colorFilter: colorFilter ??
+          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,
     );
